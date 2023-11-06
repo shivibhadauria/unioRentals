@@ -5,6 +5,8 @@ import Button from 'react-bootstrap/Button';
 import {Routes,Route,Link} from "react-router-dom";
 import Login from './components/login';
 import Register from './components/register';
+import Home from './components/home';
+import Rentals from './components/rentals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -19,8 +21,8 @@ function App() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#features">Home</Nav.Link>
-            <Nav.Link href="#pricing">Retals</Nav.Link>
+            <Nav.Link href="#features"><Link to={"/home"}>Home</Link></Nav.Link>
+            <Nav.Link href="#pricing"><Link to={"/rentals"}>Rentals</Link></Nav.Link>
             <Nav.Link href="#pricing">Vehicles</Nav.Link>
             
           </Nav>
@@ -36,6 +38,8 @@ function App() {
          <Route path="/" element={<Login />}></Route>
          <Route path="/login" element={<Login />}></Route>
          <Route path="/register" element={<Register />}></Route>
+         <Route path="/home" element={<Home />}></Route>
+         <Route path="/rentals" element={<Rentals />}></Route>
        </Routes>
 
     </div>
